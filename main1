@@ -1,0 +1,17 @@
+def is_strong(password):
+    if len(password) < 8:
+        return False
+    check = password.split()
+    for i in check:
+        if password.islower():
+            return False
+        if password.isupper():
+            return False
+    if password.isalpha():
+            return False
+    return True
+password = input().strip()
+if is_strong(password):
+    print("Strong")
+else:
+    print("Weak")
